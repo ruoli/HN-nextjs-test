@@ -3,15 +3,27 @@ import PropTypes from 'prop-types'
 import { Map } from 'immutable'
 import { connect } from 'react-redux'
 import Link from 'next/link'
+import styled from 'styled-components'
+
+const StyledHeader = styled.header`
+  display: flex;
+  align-items: center;
+  font-family: Monospace;
+  margin: 10px 20px;
+`
+
+const StyledH3 = styled.h3`
+  margin-left: 10px
+`
 
 class Layout extends PureComponent {
   render () {
     const { cart, wishList } = this.props
     return (
       <div className='layout'>
-        <header>
+        <StyledHeader>
           <img src='/static/harvey-nichols.png' />
-          <h3>harvey-nichols-test</h3>
+          <StyledH3>harvey-nichols-test</StyledH3>
           <menu>
             <Link href='/about'>
               <a>About</a>
@@ -27,15 +39,6 @@ class Layout extends PureComponent {
             </Link>
           </menu>
           <style jsx>{`
-            header {
-              display: flex;
-              align-items: center;
-              font-family: Monospace;
-              margin: 10px 20px;
-            }
-            h3 {
-              margin-left: 10px
-            }
             img {
               height: 50px;
               width: 50px;
@@ -44,7 +47,7 @@ class Layout extends PureComponent {
               margin-right: 16px;
             }
           `}</style>
-        </header>
+        </StyledHeader>
         { this.props.children }
       </div>
     )
