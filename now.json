@@ -1,0 +1,10 @@
+{
+  "name": "nextjs-redux-harvey-nichols-test",
+  "public": true,
+  "version": 2,
+  "builds": [{
+    "src": "next.config.js",
+    "use": "@now/next"
+  }],
+  "alias": "nextjs-redux-harvey-nichols-test.now.sh"
+}
